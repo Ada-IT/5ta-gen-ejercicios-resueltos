@@ -56,3 +56,12 @@ const albums = [
   - En la tabla vamos a mostrar `name`, `genre` y dos botones: 'Eliminar' y 'Ver discos'.
   - Cuando hacemos click en eliminar, borramos esa banda.
   - Cuando hacemos click en 'Ver Discos', hacemos un fetch a nuestra API `/api/bands/:bandId/albums` para pedirle todos los discos de una banda específica, y los mostramos en una tabla con las columnas `name` y `year`.
+
+**Paso 2:**
+- Vamos a agregar un formulario que nos permita crear una banda
+  - El fomulario va a tener dos campos: `name` (un input de texto), `genre` (un select con diferentes opciones de estilos musicales)
+  - Cuando clickeamos en **Guardar**, vamos a hacer un fetch POST a `/api/bands`, para crear la nueva banda.
+
+- En la tabla de bandas, además de los botones 'Eliminar' y 'Ver discos', vamos a agregar 'Nuevo Album'. Este boton nos deberá abrir un formulario (puede ser un modal) para la creación de un album nuevo de esa banda.
+  - El formulario va a tener dos campos: `name` (un input text) y `year` (un input number).
+  - Cuando clickeamos en **Guardar**, vamos a hacer un fetch POST a `/api/bands/:bandId/albums` para crear el nuevo disco
