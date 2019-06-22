@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Espotifay</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Espotifay
+        </h1>
+
+        <a id="new-band-btn" class="button is-primary">Agregar Banda</a>
+
+        <table class="table" id="bands">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Género</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <table class="table" id="albums">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Año</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="modal" id="new-band-form">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Nueva Banda</p>
+              <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <div class="field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                  <input
+                    id="name"
+                    class="input"
+                    type="text"
+                    placeholder="Nombre de la banda"
+                  />
+                </div>
+              </div>
+
+              <div class="select">
+                <select id="genre">
+                  <option disabled selected>-- Género de la banda --</option>
+                  <option>Grunge</option>
+                  <option>Rock</option>
+                  <option>Hard Rock</option>
+                </select>
+              </div>
+            </section>
+            <footer class="modal-card-foot">
+              <button id="save" class="button is-primary">Guardar</button>
+            </footer>
+          </div>
+        </div>
+
+        <div class="modal" id="new-album-form">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Nuevo Disco</p>
+              <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <div class="field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                  <input
+                    id="name"
+                    class="input"
+                    type="text"
+                    placeholder="Nombre del disco"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Año</label>
+                <div class="control">
+                  <input
+                    id="year"
+                    class="input"
+                    type="text"
+                    placeholder="Año del disco"
+                  />
+                </div>
+              </div>
+            </section>
+            <footer class="modal-card-foot">
+              <button id="save" class="button is-success">Guardar</button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
